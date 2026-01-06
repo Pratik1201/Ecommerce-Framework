@@ -19,15 +19,15 @@ public class MasterPage {
 	public Properties td;
 	
 	public MasterPage() throws Exception{
-		FileInputStream ip = new FileInputStream(".\\src\\test\\java\\com\\Ecommerce\\repository\\configuration.properties");
+		FileInputStream ip = new FileInputStream("C:\\Users\\Sumit\\git\\Ecommerce-Framework\\EcommerceFramworkDesign\\src\\test\\java\\com\\Ecommerce\\repository\\configuration.properties");
 		prop = new Properties();
 		prop.load(ip);
 		
-		FileInputStream fs = new FileInputStream(".\\src\\test\\java\\com\\Ecommerce\\repository\\locators.properties");
+		FileInputStream fs = new FileInputStream("C:\\Users\\Sumit\\git\\Ecommerce-Framework\\EcommerceFramworkDesign\\src\\test\\java\\com\\Ecommerce\\repository\\locators.properties");
 		loc = new Properties();
 		loc.load(fs);
 		
-		FileInputStream ts = new FileInputStream(".\\src\\test\\java\\com\\Ecommerce\\repository\\testdata.properties");
+		FileInputStream ts = new FileInputStream("C:\\Users\\Sumit\\git\\Ecommerce-Framework\\EcommerceFramworkDesign\\src\\test\\java\\com\\Ecommerce\\repository\\testdata.properties");
 		td = new Properties();
 		td.load(ts);
 		
@@ -54,11 +54,6 @@ public class MasterPage {
         ChromeOptions options = new ChromeOptions();
         options.setExperimentalOption("prefs", prefs);
 		driver.get(prop.getProperty("url"));
-		
-		
-		
-		
-		
 		
 	}
 
