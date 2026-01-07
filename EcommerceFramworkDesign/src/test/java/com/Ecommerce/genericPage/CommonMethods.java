@@ -35,7 +35,7 @@ public class CommonMethods extends MasterPage{
 		if(ITestResult.FAILURE==result.getStatus());
 		TakesScreenshot ts = (TakesScreenshot)driver;
 		File sourceFile = ts.getScreenshotAs(OutputType.FILE);
-		File destFolder = new File ("./screenshot/" + result.getName()+ "png");
+		File destFolder = new File ("./screenshot/" + result.getName()+ ".png");
 		FileUtils.copyFile(sourceFile, destFolder);
 		System.out.println(result.getName() + "method failed, screenshot captured");
 	}
