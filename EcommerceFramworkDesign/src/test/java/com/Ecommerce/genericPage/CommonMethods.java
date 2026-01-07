@@ -4,16 +4,20 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestResult;
 
 import java.io.File;
+import java.time.Duration;
 
 public class CommonMethods extends MasterPage{
 
+	
 	public CommonMethods() throws Exception {
 		super();
 	}
-	
+
 	public void getWebElementText(String xpathkey) {
 		String getTextOfWebElement = driver.findElement(By.xpath(loc.getProperty(xpathkey))).getText();
 		System.out.println(getTextOfWebElement);
@@ -28,7 +32,12 @@ public class CommonMethods extends MasterPage{
 	}
 	
 	public void selectCheckbox(String xpathkey) {
-		driver.findElement(By.xpath(loc.getProperty(xpathkey)));
+		driver.findElement(By.xpath(loc.getProperty(xpathkey))).click();
+	}
+	public void explicitWait(String xpathkey) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(loc.getProperty(xpathkey))));
+		
 	}
 	
 	public void captureScreenshot(ITestResult result) throws Exception {

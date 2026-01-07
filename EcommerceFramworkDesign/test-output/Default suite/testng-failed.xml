@@ -3,12 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.Ecommerce.tests.MobileSelectionTest">
+      <class name="com.Ecommerce.tests.End2EndTestingWebsite">
         <methods>
           <include name="loginTest"/>
-          <include name="mobileSelection"/>
         </methods>
-      </class> <!-- com.Ecommerce.tests.MobileSelectionTest -->
+      </class> <!-- com.Ecommerce.tests.End2EndTestingWebsite -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
