@@ -27,6 +27,10 @@ public class CommonMethods extends MasterPage{
 		driver.findElement(By.xpath(loc.getProperty(xpathkey))).sendKeys(td.getProperty(testdata));
 	}
 	
+	public void selectCheckbox(String xpathkey) {
+		driver.findElement(By.xpath(loc.getProperty(xpathkey)));
+	}
+	
 	public void captureScreenshot(ITestResult result) throws Exception {
 		if(ITestResult.FAILURE==result.getStatus());
 		TakesScreenshot ts = (TakesScreenshot)driver;
